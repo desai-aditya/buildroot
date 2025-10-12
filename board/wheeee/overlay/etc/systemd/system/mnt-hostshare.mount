@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount QEMU hostshare 9p folder
+After=network.target
+
+[Mount]
+What=hostshare
+Where=/mnt/hostshare
+Type=9p
+Options=trans=virtio,version=9p2000.L
+
+[Install]
+WantedBy=multi-user.target
